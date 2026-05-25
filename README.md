@@ -7,7 +7,7 @@ A comprehensive RESTful API for managing blood bank inventory, refrigerators, te
 - **Role-Based Access Control**: Secure API endpoints using Laravel Sanctum with `admin`, `blood_bank_staff`, and `monitoring_user` roles.
 - **Inventory Management**: Full CRUD operations for Blood Banks, Refrigerators, and Blood Bags.
 - **Temperature Monitoring**: API to log refrigerator temperatures. Real-time analysis with an observer pattern triggering critical alerts.
-- **Expiry Tracking**: Automated tracking of blood bag expiry dates and "near-risk" (within 3 days) stock calculation.
+- **Expiry Tracking**: Automated tracking of blood bag expiry dates and "near-risk" (expiring within 24 hours) stock calculation.
 - **Analytics Dashboard**: Aggregated and cached data for quick overview of inventory health, active refrigerators, and alerts.
 - **Notifications**: Automated database notifications sent to blood bank users when a refrigerator enters a critical temperature state.
 
