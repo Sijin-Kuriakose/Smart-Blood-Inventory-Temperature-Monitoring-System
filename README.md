@@ -36,7 +36,7 @@ A comprehensive RESTful API for managing blood bank inventory, refrigerators, te
    cp .env.example .env
    php artisan key:generate
    ```
-   *Update your `.env` with the SQL Server credentials (see `database/blood_inventory.bak` for a backup restore).*
+   *Update your `.env` with the SQL Server credentials.*
    ```env
    DB_CONNECTION=sqlsrv
    DB_HOST=127.0.0.1
@@ -46,11 +46,19 @@ A comprehensive RESTful API for managing blood bank inventory, refrigerators, te
    DB_PASSWORD=YourPassword
    ```
 
-4. **Run Migrations & Seeders**
+4. **Set Up the Database**
+
+   **Option A — Run Migrations & Seeders** *(recommended for a fresh setup)*:
    ```bash
    php artisan migrate --seed
    ```
    *The seeder populates the database with test users, a blood bank, refrigerators, blood bags, and temperature logs.*
+
+   **Option B — Restore from SQL Dump**:
+   A full database SQL dump is provided at `database/blood_inventory.sql`. You can restore it directly using `sqlcmd`:
+   ```bash
+   sqlcmd -S 127.0.0.1,1433 -U sa -P YourPassword -C -i database/blood_inventory.sql
+   ```
 
 5. **Start the Server**
    ```bash
