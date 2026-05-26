@@ -71,10 +71,9 @@ The database seeder creates the following users (Password for all is `password`)
 
 | Role | Email |
 |------|-------|
-| Admin | admin@example.com |
-| Blood Bank Staff | staff@example.com |
-| Monitoring User | monitor1@example.com |
-| Monitoring User | monitor2@example.com |
+| Admin | admin@test.com |
+| Blood Bank Staff | staff@test.com |
+| Monitoring User | monitor@test.com |
 
 ## API Documentation
 
